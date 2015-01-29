@@ -1,0 +1,29 @@
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /** DECLARATION SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+    //  DECLARE THE PICKAXE
+    public static Item myPickaxe_1;
+
+
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* LOAD SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+        //  LOAD THE PICKAXE
+        myPickaxe_1 = new MyPickaxe(ToolMaterial.IRON, "MyPickaxe_image_1");
+        GameRegistry.registerItem(myPickaxe_1, "MyPickaxe_image_1");
+        LanguageRegistry.addName(myPickaxe_1, "My Really Cool Pickaxe");
+
+
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* RECIPES SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+        //  PICKAXE RECIPE
+        GameRegistry.addRecipe(new ItemStack(myPickaxe_1, 1),
+                "XXX",
+                " S ",
+                " S ",
+                'S', Items.stick,
+                'X', Items.blazeRod);

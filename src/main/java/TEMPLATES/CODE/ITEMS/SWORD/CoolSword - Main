@@ -1,0 +1,38 @@
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* IMPORT / INCLUDE SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+// Import our Sword
+import com.baselogic.minecraft.tutorial.items.CoolSword
+
+
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /** DECLARATION SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+    //  DECLARE THE SWORD
+    public static Item myCoolSword_1;
+
+
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* LOAD SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+        //  LOAD THE SWORD
+        myCoolSword_1 = ItemFactory.create( CoolSword.class,
+                                            Item.ToolMaterial.IRON,
+                                            "MyCoolSword_image_1",
+                                            "My Cool Sword");
+
+
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* RECIPES SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+        RecipeFactory.create(myCoolSword_1, 1,
+                "BBB", // Row 1
+                " S ", // Row 2
+                " S ", // Row 3
+                'B', Items.brick, // Index
+                'S', Items.stick // Index
+        );
+

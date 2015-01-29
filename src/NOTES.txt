@@ -1,0 +1,29 @@
+Some Notes for running MinCraft
+
+To clean everything in the build, and refresh:
+
+For IDEA:
+./gradlew cleanCache clean setupDecompWorkspace --refresh-dependencies idea
+
+For Eclipe:
+./gradlew cleanCache clean setupDecompWorkspace --refresh-dependencies idea
+
+
+
+
+
+Playing Micraft:
+================
+
+Open Inventory:
+ctrl + E
+
+To place Crafting Table:
+ctrl + mouse click
+
+To enter Crafting mode:
+
+ctrl + mouse click
+
+
+

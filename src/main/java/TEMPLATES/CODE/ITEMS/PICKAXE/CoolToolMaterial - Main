@@ -1,0 +1,8 @@
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /** DECLARATION SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+    //  DECLARE NEW TOOL MATERIAL
+    //----------------------------------------------------------------------------- Name, harvestLevel, maxUses, efficiency, damage, enchantability -----//
+    public static Item.ToolMaterial myCoolToolMaterial = EnumHelper.addToolMaterial("Awesomeness", 3, 1561, 8.0F, 3.0F, 10);
+
