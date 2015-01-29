@@ -11,6 +11,9 @@ import net.minecraft.item.Item;
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* IMPORT / INCLUDE SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+// Import our Sword
+import com.baselogic.minecraft.tutorial.items.CoolSword;
+import net.minecraftforge.common.util.EnumHelper;
 
 /* ^ END ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
@@ -23,13 +26,26 @@ import net.minecraft.item.Item;
 @Mod(modid = MyFirstMod.MODID, version = MyFirstMod.VERSION)
 public class MyFirstMod {
 
-    public static final String MODID = "my_first_mod";
+    public static final String MODID = "SLC Modification";
     public static final String VERSION = "1.0";
 
 
     /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     /* DECLARATION SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    //  DECLARE THE SWORD
+    public static Item myCoolSword_1;
+
+    //  DECLARE NEW TOOL MATERIAL
+    public static Item.ToolMaterial myCoolToolMaterial =
+            EnumHelper.addToolMaterial(
+                    "Awesomeness",  // Material Name
+                    3,              // Harvest Level
+                    99999,           // Maximum Uses
+                    8.0F,           // Efficiency (How efficient is this material??? )
+                    15.0F,           // Damage
+                    20              // Enchantability Level
+            );
 
 
     /* ^ END ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -41,6 +57,11 @@ public class MyFirstMod {
         /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
         /* LOAD SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
         /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        //  LOAD THE SWORD
+        myCoolSword_1 = ItemFactory.create( CoolSword.class,
+                myCoolToolMaterial,
+                "MyCoolSword_image_1",
+                "My Cool Sword");
 
 
         /* ^ END ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -52,6 +73,14 @@ public class MyFirstMod {
         /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
         /* RECIPES SECTION ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
         /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+        RecipeFactory.create(myCoolSword_1, 1,
+                "BBB", // Row 1
+                " S ", // Row 2
+                " S ", // Row 3
+                'B', Items.brick, // Index
+                'S', Items.stick // Index
+        );
+
 
 
         /* ^ END ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */

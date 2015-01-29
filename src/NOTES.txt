@@ -7,12 +7,13 @@ For IDEA:
 
 For Eclipe:
 ./gradlew cleanCache clean setupDecompWorkspace --refresh-dependencies idea
+./gradlew cleanCache clean --refresh-dependencies idea
 
 
 
 
 
-Playing Micraft:
+Playing MineCraft:
 ================
 
 Open Inventory:
@@ -27,3 +28,4 @@ ctrl + mouse click
 
 
 
+##--- The End... --------------------------------------------------##
