@@ -12,7 +12,7 @@ For Eclipe:
 
 
 
-Playing Micraft:
+Playing MineCraft:
 ================
 
 Open Inventory:
@@ -27,3 +27,4 @@ ctrl + mouse click
 
 
 
+##--- The End... --------------------------------------------------##
